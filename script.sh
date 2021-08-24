@@ -2,12 +2,12 @@
 if [[ "$OSTYPE" == "linux-gnu"* ]];
         then
 
-        sudo apt update && sudo apt -y upgrade
-        sudo apt install -y gnupg2 curl wget
+        sudo yum update && sudo yum -y upgrade
+        sudo yum install -y gnupg2 curl wget
         wget -qO- https://repos.influxdata.com/influxdb.key | sudo apt-key add -
         echo "deb https://repos.influxdata.com/debian buster stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
-        sudo apt update
-        sudo apt -y install telegraf
+        sudo yum update
+        sudo yum -y install telegraf
         telegraf -config telegraf.conf
 
 
