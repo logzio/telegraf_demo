@@ -8,14 +8,14 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
         echo "deb https://repos.influxdata.com/debian buster stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
         sudo apt update
         sudo apt -y install telegraf
-        telegraf -config ~/telegraf.conf
+        telegraf -config telegraf.conf
 
 
 elif [[ "$OSTYPE" == "darwin"* ]];
         then
         brew update
         brew install telegraf
-        telegraf -config /usr/local/etc/telegraf.conf
+        telegraf -config telegraf.conf
 
 # elif [[ "$OSTYPE" == "cygwin" ]]; # POSIX compatibility layer and Linux environment emulation for Windows
 #         then
