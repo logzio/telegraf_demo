@@ -12,9 +12,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                         telegraf -config telegraf.conf
 
                 else
-                        wget https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.8.x86_64.rpm
+                        curl https://dl.influxdata.com/influxdb/releases/influxdb2-2.0.8.x86_64.rpm
                         sudo yum localinstall influxdb2-2.0.8.x86_64.rpm
-                        wget https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm
+                        curl https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm
                         sudo yum localinstall telegraf-1.19.3-1.x86_64.rpm
                         telegraf -config telegraf.conf
                 fi
