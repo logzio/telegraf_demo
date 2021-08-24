@@ -1,7 +1,7 @@
 #!/bin/bash
 if [[ "$OSTYPE" == "linux-gnu"* ]];
         then
-                if [ -f "/etc/debian-release" ] || [ -f "/etc/ubuntu-release" ];
+                if [ -f "/etc/debian_version" ];
                         then
                         sudo apt update && sudo apt -y upgrade
                         sudo apt install -y gnupg2 curl wget
