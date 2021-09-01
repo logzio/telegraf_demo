@@ -18,8 +18,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
 elif [[ "$OSTYPE" == "darwin"* ]];
 
         then
-        brew update
-        brew install telegraf
+        curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf.conf -o telegraf.conf
+        telegraf-1.19.3_darwin_amd64.dmg
         telegraf -config telegraf.conf
 
 else
