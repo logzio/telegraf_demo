@@ -12,7 +12,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
 
                 else              
                         curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf.conf -o telegraf.conf
-                        wget https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm
+                        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm -o elegraf-1.19.3-1.x86_64.rpm
                         sudo yum localinstall telegraf-1.19.3-1.x86_64.rpm
                         telegraf --config telegraf.conf
                 fi
