@@ -1,4 +1,18 @@
 #!/bin/bash
+if [[ "TYPE" == "system" ]];
+
+        then
+        curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf_system.conf -o telegraf.conf        
+        
+
+else
+
+        echo "Sorry, we don't have a configuration file for this type"
+
+fi
+
+
+
 if [[ "$OSTYPE" == "linux-gnu"* ]];
 
         then
