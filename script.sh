@@ -14,7 +14,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                         curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf.conf -o telegraf.conf
                         curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_linux_amd64.tar.gz -o telegraf-1.19.3_linux_amd64.tar.gz
                         tar xf telegraf-1.19.3_linux_amd64.tar.gz
-                        telegraf -config telegraf.conf
+                        telegraf config > telegraf.conf
                 fi
 
 elif [[ "$OSTYPE" == "darwin"* ]];
