@@ -5,7 +5,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                 if [ -f "/etc/debian_version" ];
                 
                         then
-                        curl https://github.com/logzio/telegraf_demo/blob/main/telegraf.conf
+                        curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf.conf -o telegraf.conf
                         sudo dpkg -i telegraf_1.19.3-1_amd64.deb
                         telegraf -config telegraf.conf
 
