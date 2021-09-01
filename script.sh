@@ -6,6 +6,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                 
                         then
                         curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf.conf -o telegraf.conf
+                        curl https://dl.influxdata.com/telegraf/releases/telegraf_1.19.3-1_amd64.deb
                         sudo dpkg -i telegraf_1.19.3-1_amd64.deb
                         telegraf -config telegraf.conf
 
