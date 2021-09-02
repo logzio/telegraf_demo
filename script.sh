@@ -39,6 +39,14 @@ elif [[ "$OSTYPE" == "darwin"* ]];
         mv telegraf.conf ~/Documents/telegraf.conf
         cd /Volumes
         Telegraf -config ~/Documents/telegraf.conf
+        
+elif [[ "$OSTYPE" == "win32" ]]; 
+        
+        then
+        
+        wget https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_windows_amd64.zip -UseBasicParsing -OutFile telegraf-1.19.3_windows_amd64.zip
+        Expand-Archive .\telegraf-1.19.3_windows_amd64.zip -DestinationPath 'C:\Program Files\InfluxData\telegraf\'
+        C:\"Program Files"\InfluxData\Telegraf\telegraf-1.19.3\telegraf.exe -config .\telegraf_demo/telegraf.conf
 
 else
 
