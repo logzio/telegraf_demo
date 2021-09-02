@@ -34,7 +34,8 @@ elif [[ "$OSTYPE" == "darwin"* ]];
 
         then
         
-        telegraf-1.19.3_darwin_amd64.dmg
+        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_darwin_amd64.dmg -o telegraf-1.19.3_darwin_amd64.dmg
+        sudo hdiutil attach telegraf-1.19.3_darwin_amd64.dmg
         telegraf -config telegraf.conf
 
 else
