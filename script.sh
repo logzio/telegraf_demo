@@ -25,7 +25,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                         telegraf -config telegraf.conf
 
                 else              
-                        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm -o elegraf-1.19.3-1.x86_64.rpm
+                        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm -o telegraf-1.19.3-1.x86_64.rpm
                         sudo yum localinstall telegraf-1.19.3-1.x86_64.rpm
                         telegraf --config telegraf.conf
                 fi
