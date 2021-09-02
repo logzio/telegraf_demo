@@ -37,7 +37,7 @@ elif [[ "$OSTYPE" == "darwin"* ]];
         curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_darwin_amd64.dmg -o telegraf-1.19.3_darwin_amd64.dmg
         hdiutil attach telegraf-1.19.3_darwin_amd64.dmg
         mv telegraf.conf ~/Documents/telegraf.conf
-        cd /Volumes
+        cd /Volumes || exit
         Telegraf -config ~/Documents/telegraf.conf
         
 elif [[ "$OSTYPE" == "win32" ]]; 
@@ -45,9 +45,8 @@ elif [[ "$OSTYPE" == "win32" ]];
         then
         
         wget https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_windows_amd64.zip -UseBasicParsing -OutFile telegraf-1.19.3_windows_amd64.zip
-        Expand-Archive .\telegraf-1.19.3_windows_amd64.zip -DestinationPath C:\Program Files\InfluxData\telegraf\
-        C:\Program Files\InfluxData\Telegraf\telegraf-1.19.3\telegraf.exe -config .\telegraf_demo/telegraf.conf
-
+        Expand-Archive '.\telegraf-1.19.3_windows_amd64.zip' -DestinationPath 'C:\Program Files\InfluxData\telegraf\'
+        'C:\Program Files\InfluxData\Telegraf\telegraf-1.19.3\telegraf.exe' -config '.\telegraf_demo/telegraf.conf'
 else
 
         echo "Sorry, this demo does not support your operation system"
