@@ -25,9 +25,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                         telegraf -config telegraf.conf
 
                 else              
-                        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3-1.x86_64.rpm -o telegraf-1.19.3-1.x86_64.rpm
-                        tar -xf telegraf-1.19.3-1.x86_64.rpm
-                        telegraf-1.19.3-1.x86_64.rpm --config telegraf.conf
+                        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_linux_amd64.tar.gz -o telegraf-1.19.3_linux_amd64.tar.gz
+                        tar -xf telegraf-1.19.3_linux_amd64.tar.gz
+                        telegraf-1.19.3_linux_amd64.tar.gz --config telegraf.conf
                 fi
 
 elif [[ "$OSTYPE" == "darwin"* ]];
