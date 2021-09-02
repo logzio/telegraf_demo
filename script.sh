@@ -1,5 +1,5 @@
 #!/bin/bash
-if [[ "TYPE" == "system" ]];
+if [[ $TYPE == "system" ]];
 
         then
         curl -L https://raw.githubusercontent.com/logzio/telegraf_demo/main/telegraf_system.conf -o telegraf.conf        
