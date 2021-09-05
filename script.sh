@@ -38,12 +38,6 @@ elif [[ "$OSTYPE" == "darwin"* ]];
         tar -xf telegraf-1.19.3_darwin_amd64.tar.gz
         telegraf-1.19.3/usr/bin/./telegraf --config telegraf.conf
         
-elif [[ "$OSTYPE" == "win32" ]]; 
-        
-        then
-        curl -o telegraf-1.19.3._windows_amd64.zip https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_windows_amd64.zip
-        Expand-Archive -LiteralPath .\telegraf-1.19.3._windows_amd64.zip -DestinationPath C:\'Program Files'\InfluxData\telegraf\
-        'C:\Program Files\InfluxData\Telegraf\telegraf-1.19.3\telegraf.exe' -config telegraf.conf
 else
 
         echo "Sorry, this demo does not support your operation system"
