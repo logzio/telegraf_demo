@@ -28,13 +28,27 @@ if [[ "$OSTYPE" == "linux-gnu"* ]];
                         curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_linux_amd64.tar.gz -o telegraf-1.19.3_linux_amd64.tar.gz
                         tar -xf telegraf-1.19.3_linux_amd64.tar.gz
                         telegraf-1.19.3/usr/bin/./telegraf --config telegraf.conf
+                
                 fi
 
 elif [[ "$OSTYPE" == "darwin"* ]];
 
         then
         
-        brew update
+        which -s brew
+        if [[ $? != 0 ]] ; 
+        
+        then
+        
+            # Install Homebrew
+            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        
+        else
+        
+            brew update
+        
+        fi
+
         brew install telegraf
         telegraf -config telegraf.conf
         
