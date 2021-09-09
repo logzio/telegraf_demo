@@ -34,9 +34,9 @@ elif [[ "$OSTYPE" == "darwin"* ]];
 
         then
         
-        curl -L https://dl.influxdata.com/telegraf/releases/telegraf-1.19.3_darwin_amd64.tar.gz -o telegraf-1.19.3_darwin_amd64.tar.gz
-        tar -xf telegraf-1.19.3_darwin_amd64.tar.gz
-        telegraf-1.19.3/usr/bin/./telegraf --config telegraf.conf
+        brew update
+        brew install telegraf
+        telegraf -config telegraf.conf
         
 else
 
